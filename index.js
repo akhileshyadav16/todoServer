@@ -13,7 +13,7 @@ app.use(express.json());
 
 
 app.use(cors({
-    origin: process.env.FE_URL,
+    origin: [process.env.FE_URL],
     methods: "POST,GET,PUT,DELETE",
     credentials: true,
 }));
