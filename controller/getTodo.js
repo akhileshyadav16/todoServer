@@ -16,7 +16,7 @@ exports.getTodo = async (req, res) => {
     res.status(500).json({
       success: false,
       error: err.message,
-      message: "server error",
+      message: "something went wrong in fetching all list",
     });
   }
 };
