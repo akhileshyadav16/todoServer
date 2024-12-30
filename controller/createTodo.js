@@ -3,6 +3,7 @@ const Todo = require('../models/Todo');
 
 exports.createTodo = async(req,res)=>{
     try{
+        console.log("body reg:",req.body);
         //extract title and description from req's body
         const {title,description} = req.body;
         //validation
