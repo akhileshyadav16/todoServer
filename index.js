@@ -11,11 +11,13 @@ const PORT = process.env.PORT || 4000;
 //middleware to parse req body
 app.use(express.json());
 
-
+console.log("frontend url:",process.env.FE_URL)
 app.use(cors({
     origin: [process.env.FE_URL],
     methods: "POST,GET,PUT,DELETE",
     credentials: true,
+    allowedHeaders: 'Content-Type,Authorization',
+
 }));
 
 // Enable preflight requests for all routes
